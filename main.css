@@ -391,3 +391,12 @@ footer a {
     transform: translate(0, 0);
   }
 }
+
+@media screen and (min-width: 453px) {
+  .fas {
+    width: 300px;
+    position: absolute;
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+  }
+}
