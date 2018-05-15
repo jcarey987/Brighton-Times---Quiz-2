@@ -123,6 +123,10 @@ ul {
   color: #212121;
 }
 
+.hamburger {
+  text-align: right;
+}
+
 /*
  *
  * Main
@@ -376,6 +380,11 @@ footer a {
 }
 
 @media screen and (max-width: 453px) {
+  html, body, main {
+    height: 100%;
+    width: 100%;
+  }
+
   nav {
     width: 300px;
     position: absolute;
@@ -389,6 +398,8 @@ footer a {
   nav.open {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
+    z-index: 1;
+    background: white;
   }
 }
 
