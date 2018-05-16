@@ -83,6 +83,13 @@ ul {
   color: #212121;
 }
 
+.hamburger {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  padding: 1em;
+
+}
 
 /*
  *
