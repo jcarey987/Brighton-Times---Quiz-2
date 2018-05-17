@@ -1,0 +1,65 @@
+.content {
+	display: flex; 
+	flex-wrap: wrap; 
+}
+
+.header__menu { 
+	display: none;
+}
+
+/*
+Put every segment's ordering on par first. For flex.
+Distribute extra space equally.
+For these segments, remove float (handled by flex) in main.css. 
+*/ 
+.hero, .top-news, .scores, .weather, .recent-news { 
+	order: 10; flex-grow: 1; 
+}
+
+@media screen and (max-width: 549px) { 
+/*Reduce logo and title size, proportionate with smaller screen size.
+Remove horizontal margins, more space for hamburger icon on right.
+Reduce vertical margins, less vertical scrolling on small screen. */ 
+	.headerlogo { 
+		height: 48px; 
+	} 
+	.headertitle { 
+		font-size: 2em;
+
+/* Title height smaller than logo height. To center title vertically...
+	line-height: 48px; /*
+
+Alternatively (and more correctly), to use vertical-align on the <img>,
+place it inside <h1>. Using this method with line-height so that our HTML
+is as close as possible to that given by Udacity. */ 
+	} 
+	.headerlogo, .headertitle { 
+		margin: 2px 0; 
+	}
+/*
+
+Hamburger icon, inconspicuous gray. Right of title.
+Touch target for mobile must be 48px by 48px big. */ 
+	.headermenu { 
+		display: inline-block; 
+		float: right; 
+		margin: 2px 0; 
+	} 
+	.headermenu svg.hamburger {
+		width: 48px; 
+		height: 48px; 
+		fill: #e0e0e0; 
+	}
+}
+/*
+
+Menu to be vertical list, positioned on left of screen, front of all else.
+Width 300px.
+Hidden by default. Opened by adding class 'open'. Animated open/close. / 
+.nav { z-index: 10; background-color: #ffffff; / Computed value is black. 
+Best set this. / width: 300px; / Default 'top' and 'left' as per 
+'static': right below header, and 0. / position: absolute; 
+transform: translate(-300px, 0); transition: transform 0.3s ease; } 
+.nav.open { transform: translate(0, 0); } 
+.nav__item { display: list-item; border-bottom: 1px solid #e0e0e0; / 
+Separator. */
